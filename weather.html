@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Today</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>CURRENT WEATHER</h3>
+    <div class="search">
+        <input id="name" type="text" name="find">
+        <button class="btn">Send</button>
+    </div>
+    <div id="box_error">
+        <h3 style="color: orange; font-weight: bolder;">404</h3>
+        <p>NOT FOUND</p>
+        <p>Please enter a different city</p>
+    </div>
+    <div id="telo" style="display: none;">
+        <div class="weather_today">
+            <div class="first_inform">
+                <p id="city"></p>
+                <p id="cond"></p>
+                <img id="imagine" src="https://openweathermap.org/img/wn/${obg.weather[0].icon}@2x.png">
+            </div>
+            <div class="second_inform">
+                <p id="temp"></p>
+            </div>
+            <div class="third_inform">
+                <p id="data"></p>
+                <p id="min_temp" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                <p id="max_temp" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                <p id="wind_speed" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+            </div>
+        </div>
+        <div class="weather_five_hours">
+            <div class="inform">
+                <div class="box1">
+                    <p id="head"></p>
+                    <p id="data1"></p>
+                </div>
+                <div class="box2">
+                    <p id="cond1" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <p id="temp1" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <p id="wind" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                </div>
+            </div>
+            <div class="weather">
+                <div class="box">
+                    <p id="time" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img1" src="https://openweathermap.org/img/wn/${obg.list[6].weather[0].icon}@2x.png">
+                    <p id="cond2" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="temp2" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind1" style="color: rgb(5, 161, 245); font-weight: bolder;"> </p>
+                </div>
+                <div class="box">
+                    <p id="time1" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img2" src="https://openweathermap.org/img/wn/${obg1.list[7].weather[0].icon}@2x.png">
+                    <p id="cond3" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="temp3" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind2" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                </div>
+                <div class="box">
+                    <p id="time2" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img3" src="https://openweathermap.org/img/wn/${obg1.list[0].weather[0].icon}@2x.png">
+                    <p id="cond4" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="temp4" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind3" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                </div>
+                <div class="box">
+                    <p id="time3" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img4" src="https://openweathermap.org/img/wn/${obg1.list[9].weather[0].icon}@2x.png">
+                    <p id="cond5" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="temp5" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind4" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                </div>
+                <div class="box">
+                    <p id="time4" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img5" src="https://openweathermap.org/img/wn/${obg1.list[10].weather[0].icon}@2x.png">
+                    <p id="cond6" style="color: rgb(5, 161, 245); font-weight: bolder; font-size: large;"></p>
+                    <p id="temp6" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind5" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                </div>
+                <div class="box">
+                    <p id="time5" style="color: rgb(23, 113, 162); font-weight: bolder;"></p>
+                    <img id="img6" src="https://openweathermap.org/img/wn/${obg1.list[11].weather[0].icon}@2x.png">
+                    <p id="cond7" style="color: rgb(5, 161, 245); font-weight: bolder; font-size: large;"></p>
+                    <p id="temp7" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                    <p id="wind6" style="color: rgb(5, 161, 245); font-weight: bolder;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
